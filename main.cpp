@@ -19,6 +19,12 @@ int main(int argc, char *argv[]) {
     if (argc == 4) {
         number1 = atoi(argv[1]);
         number2 = atoi(argv[3]);
+
+        if (!strcmp("mul", argv[2])) {
+            result = number1 * number2;
+            printf("%d * %d = %d\n", number1, number2, result);
+            return 0;
+        }
     }
 
     usage(argv[0]);
